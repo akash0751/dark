@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-left: 250px;
+            justify-items: end;
+            justify-content: end;
+        }
+        .btn11{
+            background-color: white;
+            color: white;
+            border: none;
+            padding: 20px;
+            border-radius: 50px;
+        }
+        .if-clicked{
+            background-color: black;
+            color:  black !important;
+            border: none;
+            padding: 20px;
+            border-radius: 50px;
+        }
+        .if-clicked1{
+            background-color: white;
+            color:black;
+            border: none;
+            padding: 20px;
+            border-radius: 50px;
+        }
+        .btn12{
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 20px;
+            border-radius: 50px;
+        }
+        h1{
+            text-align: center;
+            padding-top: 20px;
+        }
+    </style>
+    <script>
+        
+        function buttonEvent(){
+            const button = document.getElementById('btn');
+        const button1 = document.getElementById('btn1');
+        let para = document.querySelector('.Hi');
+            if(buttonEvent){
+
+               document.body.style.backgroundColor = 'black';
+               document.body.style.color = "white";
+             button.classList.add("if-clicked");
+             button1.classList.add("if-clicked1");
+             para.textContent = "welcome to dark mode"
+            }
+            
+        }
+        function buttonEvent1(){
+            const button = document.getElementById('btn');
+        const button1 = document.getElementById('btn1')
+        let para = document.querySelector('.Hi');
+            if(buttonEvent1){
+               
+               document.body.style.backgroundColor = 'white';
+               document.body.style.color = "black";
+            button.classList.remove("if-clicked");
+            button1.classList.remove("if-clicked1");
+            para.textContent = "welcome to light mode"
+           }
+        }
+    </script>
+</head>
+<body>
+    <button id="btn" onclick="buttonEvent()" class="btn12">Dark Mode</button>
+    <button id="btn1" onclick="buttonEvent1()" class="btn11">light Mode</button>
+    <h1 class="Hi">welcome to light mode</h1>
+</body>
+</html>
